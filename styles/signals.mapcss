@@ -1093,7 +1093,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=k
 /**************************/
 /* DE main signal type Ks */
 /**************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ks"]["railway:signal:main:form"=light]["railway:signal:main:states"="DE-ESO:hp0;DE-ESO:ks1"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ks"]["railway:signal:main:form"=light]["railway:signal:main:states"=~/^DE-ESO:hp0;DE-ESO:ks1(;(off|DE-ESO:kennlicht|\?))?$/],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=ks]["railway:signal:main:form"=light]["railway:signal:main:states"="hp0;ks1"]
 {
 	z-index: 10100;

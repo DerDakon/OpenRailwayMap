@@ -30,6 +30,15 @@ canvas
 
 @import url("common.mapcss");
 
+/* A note on "dashes":
+ * One must consider lines with multiple tracks when using dashes. In case of corners
+ * the gap of one line may be aligned with the dash of the other line. If the 2 tracks
+ * are very close to each other (i.e. lower zoom levels) this will end up showing a
+ * "solid" track.
+ * To prevent this this seems like a reasonable estimation:
+ * line + width + 2 = gap
+ */
+
 way.tracks_present,
 way.tracks_disused,
 way.tracks_abandoned,

@@ -161,16 +161,29 @@ way|z11-[railway=razed][!bridge][!tunnel]["razed:ref"]
 /*****************************************/
 way|z17-["railway:track_ref"].tracks
 {
-	text: "railway:track_ref";
 	text-position: line;
 	text-color: white;
 	font-size: 11;
-	font-family: "Verdana Bold";
 	font-weight: bold;
-	text-halo-radius: 4;
 	text-halo-color: blue;
 	shield-color: blue;
 	shield-shape: rectangular;
+	shield-text: eval(tag("railway:track_ref"));
+	shield-frame-color: blue;
+	shield-frame-width: 3;
+	shield-opacity: 1;
+	shield-text-color: white;
+	text-halo-radius: 0;
+	shield-font-family: "Verdana Bold";
+}
+
+@supports (user-agent: josm) {
+	way|z17-["railway:track_ref"].tracks
+	{
+		text: "railway:track_ref";
+		text-halo-radius: 4;
+		font-family: "Verdana Bold";
+	}
 }
 
 /**** COLORS ****/
